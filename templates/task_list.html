@@ -24,8 +24,8 @@
     
     {% comment %} <h5>Дата выполнения:</h5> 
     <p>{{task.deadline}}</p> {% endcomment %}
-    {% comment %} <a href="{% url 'task_edit' task.pk  %}">Редактировать</a>
-    <a href="{% url 'task_delete' task.pk  %}">Удалить</a> {% endcomment %}
+    <a href="{% url 'task_update' task.pk  %}">Редактировать</a>
+    {% comment %} <a href="{% url 'task_delete' task.pk  %}">Удалить</a> {% endcomment %}
     <hr> 
 
     {% endfor %}
