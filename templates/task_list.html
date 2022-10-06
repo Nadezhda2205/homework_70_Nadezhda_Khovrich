@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Список задач 
+{% endblock %}
+
+
+ {% block content %}
+ <h1>Список задач</h1>   
+
+    {% for task in tasks %}
+    <a href="{% url 'task_detail' task.pk %}"><p>{{ task.summary }}</p></a> 
+    
+    
+    
+    <p>{{ task.description }}</p>
+
+    <h5>Статус:</h5> 
+    <p>{{task.status}}</p> 
+    
+    <h5>Тип:</h5> 
+    <p>{{task.type}}</p> 
+
+    
+    {% comment %} <h5>Дата выполнения:</h5> 
+    <p>{{task.deadline}}</p> {% endcomment %}
+    {% comment %} <a href="{% url 'task_edit' task.pk  %}">Редактировать</a>
+    <a href="{% url 'task_delete' task.pk  %}">Удалить</a> {% endcomment %}
+    <hr> 
+
+    {% endfor %}
+
+{% endblock %}
