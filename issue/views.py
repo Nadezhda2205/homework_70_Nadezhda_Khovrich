@@ -63,3 +63,17 @@ class TaskAddView(TemplateView):
             'form': form
         }
         return render(request, 'task_add.html', context)
+
+
+class TaskDeleteView(TemplateView):
+    template_name: str = 'task_delete.html'
+
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context['task'] = get_object_or_404(Task, pk=kwargs['pk'])
+        return context
+
+    def post(self, request, *args, **kwargs):
+        task = get_object_or_404(Task, pk=kwargs['pk'])
+        task.delete()       
+        return redirect('task_list')
