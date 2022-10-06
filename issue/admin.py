@@ -1,3 +1,6 @@
 from django.contrib import admin
+from issue.models import Status, Task, Type
 
-# Register your models here.
+admin.site.register(Status)
+admin.site.register(Task)
+admin.site.register(Type)
