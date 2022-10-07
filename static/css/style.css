@@ -1,0 +1,10 @@
+body{
+    background-color: rgba(154, 15, 115, 0.425);
+}
+
+.p_color{
+    margin-top: 16px;
+    font-size: 18px;
+    color: rgb(243, 2, 2);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(72, 210, 189);
+}

@@ -4,17 +4,16 @@
     Детальный просмотр 
 {% endblock %}
 
-
  {% block content %}
     <h4>Детальный просмотр задачи<h4>
     <h5>Задача:</h5>
         {{ task.summary }}
-    <h5>Подробное описание:<h5>
+    <h5>Подробное описание:</h5>
         {{ task.description }}   
     <h5>Статус:</h5>
-        {{ task.status }}
+        <p>{{ task.status }}</p>
 
-    {% comment %} <p><a href="{% url 'task_edit' task.pk  %}">Редактировать</a></p>
-    <a href="{% url 'task_delete' task.pk  %}">Удалить</a> {% endcomment %}
+    <a class="btn btn-secondary btn-lg" href="{% url 'task_update' task.pk  %}">Редактировать</a>
+    <a class="btn btn-secondary btn-lg" href="{% url 'task_delete' task.pk  %}">Удалить</a>
 
 {% endblock %}

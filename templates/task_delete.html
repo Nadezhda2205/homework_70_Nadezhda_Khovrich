@@ -4,21 +4,20 @@
     Детальный просмотр 
 {% endblock %}
 
-
  {% block content %}
     <h4>Детальный просмотр задачи<h4>
-    <h5>Задача:</h5>
+    <h5>Заголовок:</h5>
         {{ task.summary }}
-    <h5>Подробное описание:<h5>
+    <h5>Подробное описание:</h5>
         {{ task.description }}   
     <h5>Статус:</h5>
         {{ task.status }}
 
     <form action="" method="post">
         {% csrf_token %}
-
-        <p><a href="{% url 'task_detail' task.pk  %}">Нет</a></p>
-        <input type="submit" value="Да">
+        <p class="p_color">Вы действительно хотите удалить задачу? </p>
+        <a class="btn btn-secondary btn-lg" href="{% url 'task_detail' task.pk  %}">Нет</a>
+        <input class="btn btn-secondary btn-lg" type="submit" value="Да">
     </form>    
     
 {% endblock %}
