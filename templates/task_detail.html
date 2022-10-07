@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Детальный просмотр 
+Детальный просмотр
 {% endblock %}
 
- {% block content %}
-    <h4>Детальный просмотр задачи<h4>
+{% block content %}
+<h4>Детальный просмотр задачи<h4>
     <h5>Задача:</h5>
-        {{ task.summary }}
+    {{ task.summary }}
     <h5>Подробное описание:</h5>
-        {{ task.description }}   
+    {{ task.description }}
     <h5>Статус:</h5>
-        <p>{{ task.status }}</p>
+    <p>{{ task.status }}</p>
 
     <a class="btn btn-secondary btn-lg" href="{% url 'task_update' task.pk  %}">Редактировать</a>
     <a class="btn btn-secondary btn-lg" href="{% url 'task_delete' task.pk  %}">Удалить</a>
 
-{% endblock %}
+    {% endblock %}

@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Редактирование задачи 
+Редактирование задачи
 {% endblock %}
 
 
- {% block content %}
-    <h5>Редактирование задачи:</h5>
-    <form action="" method="POST">
-        {% csrf_token %}
-        
-        {{ form.as_p }}
+{% block content %}
+<h5>Редактирование задачи:</h5>
+<form action="" method="POST">
+    {% csrf_token %}
 
-<input class="btn btn-secondary btn-lg" type="submit" value="Сохранить">
+    {{ form.as_p }}
 
-    </form>
+    <input class="btn btn-secondary btn-lg" type="submit" value="Сохранить">
+
+</form>
 
 {% endblock %}
