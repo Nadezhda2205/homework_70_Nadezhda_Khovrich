@@ -4,8 +4,16 @@
 Список задач
 {% endblock %}
 
-
 {% block content %}
+
+<form action="" method="GET">
+    {% csrf_token %}
+  
+    {{ form}}
+  
+    <input type="submit" value="Поиск">
+  
+  </form>
 
 <h1>Список задач</h1>
 <div class="shadow-lg p-3 mb-5 bg-body rounded-3">
@@ -27,7 +35,9 @@
     <a class="btn btn-secondary btn-lg" href="{% url 'task_delete' task.pk  %}">Удалить</a>
 
     <hr>
-
+    {% empty %}
+    <p>Статус запроса 404</p> 
+    <p>Задача не найдена</p>
     {% endfor %}
 </div>
     
