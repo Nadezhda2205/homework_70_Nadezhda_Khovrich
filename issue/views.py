@@ -1,18 +1,23 @@
 from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from typing import Any
 from issue.forms import TaskForm
 from issue.models import Task
 
 
-class TaskListView(TemplateView):
+class TaskListView(ListView):
     template_name: str = 'task_list.html'
+    model = Task
+    context_object_name = 'tasks'
+    paginate_by = 3
+    paginate_orphans = 1
 
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = Task.objects.all()
-        return context
+
+    # def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+    #     context = super().get_context_data(**kwargs)
+    #     context['tasks'] = Task.objects.all()
+    #     return context
 
 class TaskDetailView(TemplateView):
     template_name: str = 'task_detail.html'
