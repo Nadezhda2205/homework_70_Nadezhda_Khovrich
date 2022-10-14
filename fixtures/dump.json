@@ -130,6 +130,461 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-10-12T18:39:54.719Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Проект 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-10-12T18:51:49.851Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Проект 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-10-12T18:52:04.542Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "FDFDF",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-10-12T18:52:15.416Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "q",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-10-12T18:52:23.834Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "QQQQ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-10-12T18:52:34.222Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "xvxvxdg",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-10-12T18:52:40.410Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "sfsffqfqf",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-10-12T18:56:38.630Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "FDFDF",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-10-12T18:56:43.374Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "q",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-10-12T18:56:46.946Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "QQQQ",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-10-12T18:56:50.447Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "xvxvxdg",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-10-12T18:56:53.863Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "sfsffqfqf",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-10-14T03:36:29.867Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Проект 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-10-14T03:36:42.617Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Проект 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-10-14T03:50:29.565Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "ddsd",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-10-14T08:54:46.732Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "QQQQ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0434\\u0430\\u043b\\u0435\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-10-14T08:57:01.904Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "QQQQЗадача 5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-10-14T08:57:08.968Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "QQQQ Задача 4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-10-14T08:57:17.653Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "QQQQq Задача 3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-10-14T08:57:23.022Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Задача 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-10-14T08:57:28.799Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Задача 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-10-14T09:05:45.675Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Задача 1",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-10-14T09:16:26.266Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Задача 10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-10-14T09:28:02.305Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Задача 15",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-10-14T09:28:21.156Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Задача капец какая",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-10-14T09:28:38.213Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Доделать нужно",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-10-14T09:28:49.763Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "А мне бы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-10-14T09:29:02.291Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Купить мороженое",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2022-10-14T10:21:59.039Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Купить мороженое",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0434\\u0430\\u043b\\u0435\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2022-10-14T10:28:35.899Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "Удали меня",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2022-10-14T12:08:28.213Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Задолбалась уже",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2022-10-14T12:15:07.861Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Задача капец какая",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0434\\u0430\\u043b\\u0435\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2022-10-14T13:08:26.150Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Не успела",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2022-10-14T13:08:39.531Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "вфвфвфвфв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u0430\\u0433\\u043e\\u043b\\u043e\\u0432\\u043e\\u043a\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041f\\u0440\\u043e\\u0435\\u043a\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2022-10-14T13:08:49.315Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "фвфыфы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -454,6 +909,42 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add project",
+    "content_type": 10,
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change project",
+    "content_type": 10,
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete project",
+    "content_type": 10,
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view project",
+    "content_type": 10,
+    "codename": "view_project"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
@@ -544,6 +1035,14 @@
   }
 },
 {
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "issue",
+    "model": "project"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "vf3277mz8bggepg9x3ojnnpr9b5kxvzj",
   "fields": {
@@ -594,63 +1093,147 @@
   }
 },
 {
-  "model": "issue.task",
+  "model": "issue.project",
+  "pk": 1,
+  "fields": {
+    "name": "Проект 1",
+    "description": "супер",
+    "start_date": "2022-10-12",
+    "end_date": "2022-11-10"
+  }
+},
+{
+  "model": "issue.project",
+  "pk": 2,
+  "fields": {
+    "name": "Проект 2",
+    "description": "Просто класс",
+    "start_date": "2022-10-18",
+    "end_date": "2022-11-25"
+  }
+},
+{
+  "model": "issue.project",
   "pk": 3,
   "fields": {
-    "summary": "sfsffqfqf",
-    "description": "dfvdfgff",
-    "status": 3,
-    "type": 3,
-    "created_at": "2022-10-06T15:04:39.555Z",
-    "updated_at": "2022-10-06T15:04:39.555Z"
+    "name": "Проект 3",
+    "description": "ыаыаыа",
+    "start_date": "2022-10-12",
+    "end_date": "2022-11-25"
   }
 },
 {
-  "model": "issue.task",
+  "model": "issue.project",
   "pk": 4,
   "fields": {
-    "summary": "xvxvxdg",
-    "description": "sdsdgsdg",
-    "status": 2,
-    "type": 1,
-    "created_at": "2022-10-06T15:04:46.728Z",
-    "updated_at": "2022-10-06T15:04:46.728Z"
+    "name": "Проект 4",
+    "description": "фвфвфв",
+    "start_date": "2022-10-18",
+    "end_date": "2022-11-25"
   }
 },
 {
-  "model": "issue.task",
+  "model": "issue.project",
   "pk": 5,
   "fields": {
-    "summary": "QQQQ",
-    "description": "qqqqq",
-    "status": 1,
-    "type": 1,
-    "created_at": "2022-10-06T17:55:43.557Z",
-    "updated_at": "2022-10-06T17:55:43.557Z"
+    "name": "Проект 5",
+    "description": "ввв",
+    "start_date": "2022-10-12",
+    "end_date": "2022-11-25"
   }
 },
 {
-  "model": "issue.task",
+  "model": "issue.project",
   "pk": 6,
   "fields": {
-    "summary": "q",
-    "description": "qqqqq",
-    "status": 2,
-    "type": 1,
-    "created_at": "2022-10-06T17:56:10.194Z",
-    "updated_at": "2022-10-06T17:56:10.194Z"
+    "name": "sssss",
+    "description": "sssss",
+    "start_date": "2022-10-12",
+    "end_date": "2022-11-25"
   }
 },
 {
   "model": "issue.task",
-  "pk": 7,
+  "pk": 23,
   "fields": {
-    "summary": "FDFDF",
-    "description": "ccccvvvbbnn",
+    "summary": "Купить мороженое",
+    "description": "ывымсывм",
     "status": 1,
     "type": 1,
-    "created_at": "2022-10-07T03:40:02.057Z",
-    "updated_at": "2022-10-07T03:40:02.057Z"
+    "is_deleted": true,
+    "created_at": "2022-10-14T09:29:02.289Z",
+    "updated_at": "2022-10-14T13:12:43.058Z",
+    "project": 1
+  }
+},
+{
+  "model": "issue.task",
+  "pk": 25,
+  "fields": {
+    "summary": "вфвфвфвфв",
+    "description": "фвфвфвф",
+    "status": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2022-10-14T12:08:28.211Z",
+    "updated_at": "2022-10-14T13:08:39.530Z",
+    "project": 4
+  }
+},
+{
+  "model": "issue.task",
+  "pk": 26,
+  "fields": {
+    "summary": "Не успела",
+    "description": "жесть как не хватает времени",
+    "status": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2022-10-14T13:08:26.148Z",
+    "updated_at": "2022-10-14T13:08:26.148Z",
+    "project": 1
+  }
+},
+{
+  "model": "issue.task",
+  "pk": 27,
+  "fields": {
+    "summary": "фвфыфы",
+    "description": "вфвфв",
+    "status": 2,
+    "type": 2,
+    "is_deleted": false,
+    "created_at": "2022-10-14T13:08:49.313Z",
+    "updated_at": "2022-10-14T13:08:49.313Z",
+    "project": 5
+  }
+},
+{
+  "model": "issue.task",
+  "pk": 28,
+  "fields": {
+    "summary": "ss",
+    "description": "sss",
+    "status": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2022-10-14T13:12:00.962Z",
+    "updated_at": "2022-10-14T13:12:00.962Z",
+    "project": 1
+  }
+},
+{
+  "model": "issue.task",
+  "pk": 29,
+  "fields": {
+    "summary": "dd",
+    "description": "dddd",
+    "status": 1,
+    "type": 1,
+    "is_deleted": false,
+    "created_at": "2022-10-14T13:12:33.490Z",
+    "updated_at": "2022-10-14T13:12:33.490Z",
+    "project": 6
   }
 }
 ]
