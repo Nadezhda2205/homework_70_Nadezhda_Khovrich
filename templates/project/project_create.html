@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление проекта
+{% endblock %}
+
+{% block content %}
+<h5>Добавление проекта:</h5>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input class="btn btn-secondary btn-lg" type="submit" value="Сохранить">
+</form>
+
+{% endblock %}

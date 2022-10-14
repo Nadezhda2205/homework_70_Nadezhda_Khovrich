@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, TemplateView, CreateView
 from typing import Any
-from issue.forms import TaskForm, SearchTaskForm
+from issue.forms import TaskForm, SearchTaskForm, ProjectForm
 from issue.models import Task, Project
 from django.urls import reverse
 from django.db.models import Q
@@ -104,3 +104,13 @@ class ProjectDetailView(DetailView):
     template_name: str = 'project/project_detail.html'
     model = Project
     context_object_name = 'project'
+
+
+class ProjectCreateView(CreateView):
+    template_name: str = 'task_create.html'
+    form_class = ProjectForm
+    model = Project
+
+    def get_success_url(self):
+        return reverse('project_detail', kwargs={'pk': self.object.pk})
+
