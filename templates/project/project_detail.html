@@ -17,8 +17,8 @@
     <h5>Статус:</h5>
         <p>{{ task.status }}</p>
    
-    <a class="btn btn-secondary btn-lg" href="#">Редактировать</a>
-    <a class="btn btn-secondary btn-lg" href="#">Удалить</a>
+    <a class="btn btn-secondary btn-lg" href="{% url 'task_update' task.pk %}">Редактировать</a>
+    <a class="btn btn-secondary btn-lg" href="{% url 'task_delete' task.pk %}">Удалить</a>
     <hr>
     {% endfor %}
 {% endblock %}
