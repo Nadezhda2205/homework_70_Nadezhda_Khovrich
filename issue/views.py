@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import TemplateView, ListView
+from django.views.generic import ListView, DetailView, TemplateView, CreateView
 from typing import Any
 from issue.forms import TaskForm, SearchTaskForm
 from issue.models import Task
+from django.urls import reverse
 from django.db.models import Q
 
 
@@ -15,33 +16,24 @@ class TaskListView(ListView):
 
  
     def get_context_data(self, **kwargs):
-        print('get_context_data')
-
         context = super().get_context_data(**kwargs)
         context['form'] = self.form
         return context
 
     def get(self, request, *args, **kwargs):
-        print('get')
-
         self.form = self.get_search_form()
         self.search_value = self.get_search_value()
-        print(self.search_value)
         return super().get(request, *args, **kwargs)
 
     def get_search_form(self):
-        print('get_search_form')
         return SearchTaskForm(self.request.GET)
 
     def get_search_value(self):
-        print('get_search_value')
-
         if self.form.is_valid():
             return self.form.cleaned_data.get('search')
         return None
 
     def get_queryset(self):
-        print('get_queryset')
         queryset = super().get_queryset()
         if self.search_value:
             queryset = queryset.filter(
@@ -50,13 +42,10 @@ class TaskListView(ListView):
         return queryset
 
 
-class TaskDetailView(TemplateView):
+class TaskDetailView(DetailView):
     template_name: str = 'task_detail.html'
-
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context['task'] = get_object_or_404(Task, pk=kwargs['pk'])
-        return context
+    model = Task
+    context_object_name = 'task'
 
 
 class TaskUpdateView(TemplateView):
@@ -79,26 +68,16 @@ class TaskUpdateView(TemplateView):
             'form': form
         }
         return render(request, 'task_update.html', context)
+   
 
+class TaskCreateView(CreateView):
+    template_name: str = 'task_create.html'
+    form_class = TaskForm
+    model = Task
 
-class TaskAddView(TemplateView):
-    template_name: str = 'task_add.html'
+    def get_success_url(self):
+        return reverse('task_detail', kwargs={'pk': self.object.pk})
 
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        form = TaskForm()
-        context['form'] = form
-        return context
-
-    def post(self, request, *args, **kwargs):
-        form: TaskForm = TaskForm(request.POST)
-        if form.is_valid():
-            task = form.save()
-            return redirect('task_detail', pk=task.pk)
-        context = {
-            'form': form
-        }
-        return render(request, 'task_add.html', context)
 
 
 class TaskDeleteView(TemplateView):
