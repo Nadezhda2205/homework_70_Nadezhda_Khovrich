@@ -9,16 +9,11 @@
 
 <h1>Список проектов</h1>
 <div class="shadow-lg p-3 mb-5 bg-body rounded-3">
-    {% comment %} {% for project in projects %}
-    <a href="{% url 'task_detail' task.pk %}">
-        <p>{{ project.name }}</p>
-    </a>
-    <hr> 
 
-    {% endfor %}{% endcomment %}
     {% for project in projects %}
-    <a href="#"><p>{{ project.name}}</p></a>
+        <a href="{% url 'project_detail' project.pk %}"><p>{{ project.name}}</p></a>
     {% endfor %}
+
 </div>
 
 {% endblock %}

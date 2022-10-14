@@ -100,3 +100,7 @@ class ProjectListView(ListView):
     context_object_name = 'projects'
 
 
+class ProjectDetailView(DetailView):
+    template_name: str = 'project/project_detail.html'
+    model = Project
+    context_object_name = 'project'

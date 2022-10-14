@@ -33,7 +33,7 @@ class Task(models.Model):
     type = models.ForeignKey(to='issue.Type', verbose_name='Тип', related_name='type', on_delete=models.RESTRICT)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
-    project = models.ForeignKey(to='issue.Project', verbose_name='Проект', related_name='project', on_delete=models.RESTRICT)
+    project = models.ForeignKey(to='issue.Project', verbose_name='Проект', related_name='tasks', on_delete=models.RESTRICT)
 
     def __str__(self) -> str:
         return self.summary

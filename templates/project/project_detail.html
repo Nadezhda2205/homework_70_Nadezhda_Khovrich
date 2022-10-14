@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Детальный просмотр
+{% endblock %}
+
+{% block content %}
+<h4>Детальный просмотр задач {{ project.name }}</h4>
+
+{% for task in project.tasks.all %}
+    <h5>Задача:</h5>
+        {{ task.summary }}
+    <h5>Подробное описание:</h5>
+        {{ task.description }}
+    <h5>Статус:</h5>
+        <p>{{ task.status }}</p>
+   
+    <a class="btn btn-secondary btn-lg" href="#">Редактировать</a>
+    <a class="btn btn-secondary btn-lg" href="#">Удалить</a>
+    <hr>
+    {% endfor %}
+{% endblock %}
