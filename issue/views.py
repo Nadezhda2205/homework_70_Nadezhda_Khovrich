@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, DetailView, TemplateView, CreateView
+from django.shortcuts import get_object_or_404
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from typing import Any
+from django.urls import reverse, reverse_lazy
+from django.db.models import Q
+
 from issue.forms import TaskForm, SearchTaskForm, ProjectForm
 from issue.models import Task, Project
-from django.urls import reverse
-from django.db.models import Q
 
 
 class TaskListView(ListView):
@@ -48,27 +49,15 @@ class TaskDetailView(DetailView):
     context_object_name = 'task'
 
 
-class TaskUpdateView(TemplateView):
-    template_name: str = 'task_update.html'
+class TaskUpdateView(UpdateView):
+    template_name = 'task_update.html'
+    form_class = TaskForm
+    model = Task
+    context_object_name = 'task'
 
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        task = get_object_or_404(Task, pk=kwargs['pk'])
-        form = TaskForm(instance=task)
-        context['form'] = form
-        return context
+    def get_success_url(self):
+        return reverse('task_detail', kwargs={'pk': self.object.pk})
 
-    def post(self, request, *args, **kwargs):
-        task = get_object_or_404(Task, pk=kwargs['pk'])
-        form: TaskForm = TaskForm(request.POST, instance=task)
-        if form.is_valid():
-            form.save()
-            return redirect('task_detail', pk=task.pk)
-        context = {
-            'form': form
-        }
-        return render(request, 'task_update.html', context)
-   
 
 class TaskCreateView(CreateView):
     template_name: str = 'task_create.html'
@@ -79,7 +68,6 @@ class TaskCreateView(CreateView):
         self.object = None
         return super().get(request, *args, **kwargs)
 
-
     def get_success_url(self):
         return reverse('task_detail', kwargs={'pk': self.object.pk})
 
@@ -88,18 +76,11 @@ class TaskCreateView(CreateView):
         return super().form_valid(form)
 
 
-class TaskDeleteView(TemplateView):
-    template_name: str = 'task_delete.html'
-
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context['task'] = get_object_or_404(Task, pk=kwargs['pk'])
-        return context
-
-    def post(self, request, *args, **kwargs):
-        task = get_object_or_404(Task, pk=kwargs['pk'])
-        task.delete()       
-        return redirect('task_list')
+class TaskDeleteView(DeleteView):
+    template_name = 'task_delete.html'
+    model = Task
+    success_url = reverse_lazy('task_list')
+    
 
 
 class ProjectListView(ListView):
@@ -121,4 +102,3 @@ class ProjectCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('project_detail', kwargs={'pk': self.object.pk})
-

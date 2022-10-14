@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+
 
 
 class Status(models.Model):
@@ -31,10 +33,10 @@ class Task(models.Model):
     description = models.TextField(verbose_name='Описание', null=True)
     status = models.ForeignKey(to='issue.Status', verbose_name='Статус', related_name='status', on_delete=models.RESTRICT)
     type = models.ForeignKey(to='issue.Type', verbose_name='Тип', related_name='type', on_delete=models.RESTRICT)
+    is_deleted = models.BooleanField(verbose_name='Удалено', default=False, null=False)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
     project = models.ForeignKey(to='issue.Project', verbose_name='Проект', related_name='tasks', on_delete=models.RESTRICT)
 
     def __str__(self) -> str:
         return self.summary
-
