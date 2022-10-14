@@ -72,12 +72,20 @@ class TaskUpdateView(TemplateView):
 
 class TaskCreateView(CreateView):
     template_name: str = 'task_create.html'
-    form_class = TaskForm
     model = Task
+    fields = ['summary', 'description', 'status', 'type']
+
+    def get(self, request, *args, **kwargs):
+        self.object = None
+        return super().get(request, *args, **kwargs)
+
 
     def get_success_url(self):
         return reverse('task_detail', kwargs={'pk': self.object.pk})
 
+    def form_valid(self, form):
+        form.instance.project = get_object_or_404(Project, id=self.kwargs.get('pk'))
+        return super().form_valid(form)
 
 
 class TaskDeleteView(TemplateView):
