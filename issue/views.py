@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, TemplateView, CreateView
 from typing import Any
 from issue.forms import TaskForm, SearchTaskForm
-from issue.models import Task
+from issue.models import Task, Project
 from django.urls import reverse
 from django.db.models import Q
 
@@ -92,3 +92,11 @@ class TaskDeleteView(TemplateView):
         task = get_object_or_404(Task, pk=kwargs['pk'])
         task.delete()       
         return redirect('task_list')
+
+
+class ProjectListView(ListView):
+    template_name: str = 'project/project_list.html'
+    model = Project
+    context_object_name = 'projects'
+
+
