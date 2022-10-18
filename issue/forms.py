@@ -10,7 +10,7 @@ class TaskForm(forms.ModelForm):
 
 
 class SearchTaskForm(forms.Form):
-    search = forms.CharField(required=False)
+    search = forms.CharField(required=False, label='')
 
 
 class ProjectForm(forms.ModelForm):

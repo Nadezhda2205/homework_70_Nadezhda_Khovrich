@@ -24,7 +24,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="{% url 'task_list' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'task_list' %}"><img src="{% static 'css/img/logo.png' %}" alt="logo" height="55" width="66"></a>
+        
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'project_list' %}">Список проектов</a>
@@ -32,6 +33,16 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'project_create' %}">Новый проект</a>
           </li>
+          <div class="ms-5">
+            <form action="" method="GET">
+              {% csrf_token %}
+
+              {{ form}}
+
+              <input type="submit" value="Поиск">
+
+            </form>
+          </div>    
         </ul>
       </div>
     </div>
