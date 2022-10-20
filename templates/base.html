@@ -31,23 +31,44 @@
             <a class="nav-link active" aria-current="page" href="{% url 'project_list' %}">Список проектов</a>
           </li>
           <li class="nav-item">
+            {% if user.is_authenticated %}
             <a class="nav-link active" aria-current="page" href="{% url 'project_create' %}">Новый проект</a>
+            {% endif %}
           </li>
-          <div class="ms-5">
-          <form action="{% url 'task_list' %}" method="GET">
-            {% csrf_token %}
+          <div class="ms-5 d-flex">
+            <div>
+              <form action="{% url 'task_list' %}" method="GET">
+                {% csrf_token %}
 
-            {{ searchtaskform }}
+                {{ searchtaskform }}
 
-            <input type="submit" value="Поиск">
+                <input class="btn btn-secondary btn-sm" type="submit" value="Поиск" placeholder="Найти задачу">
 
-          </form>
-          
+              </form>
+            </div>
+            <div class="ms-5 d-flex">
+              {% if user.is_authenticated %}
+                <li>
+                  Здравствуйте {{ user.username }}
+                </li>
+                <li>    
+                  <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-secondary btn-sm ms-5" type="submit" value="Выйти">
+                  </form>
+                </li>  
+              {% else %}
+                <li>Выполнить вход: <a class="btn btn-secondary btn-sm ms-5" href="{% url 'login' %}">Вход</a></li>
+              {% endif %}
+            </div>      
           </div>    
         </ul>
       </div>
     </div>
   </nav>
+
+
+  
   <div class="container">
     {% block content %}
 

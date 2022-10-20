@@ -1,14 +1,21 @@
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from typing import Any
 from django.urls import reverse, reverse_lazy
 from django.db.models import Q
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 from issue.forms import TaskForm, SearchTaskForm, ProjectForm
 from issue.models import Task, Project
 
 
-class TaskListView(ListView):
+class SuccessDetailUrlMixin:
+    def get_success_url(self):
+        return reverse('task_detail', kwargs={'pk': self.object.pk})
+
+
+
+class TaskListView(SuccessDetailUrlMixin, ListView):
     template_name: str = 'task_list.html'
     model = Task
     context_object_name = 'tasks'
@@ -43,13 +50,13 @@ class TaskListView(ListView):
         return queryset
 
 
-class TaskDetailView(DetailView):
+class TaskDetailView(LoginRequiredMixin, DetailView):
     template_name: str = 'task_detail.html'
     model = Task
     context_object_name = 'task'
 
 
-class TaskUpdateView(UpdateView):
+class TaskUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'task_update.html'
     form_class = TaskForm
     model = Task
@@ -59,7 +66,7 @@ class TaskUpdateView(UpdateView):
         return reverse('task_detail', kwargs={'pk': self.object.pk})
 
 
-class TaskCreateView(CreateView):
+class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name: str = 'task_create.html'
     model = Task
     fields = ['summary', 'description', 'status', 'type']
@@ -76,7 +83,7 @@ class TaskCreateView(CreateView):
         return super().form_valid(form)
 
 
-class TaskDeleteView(DeleteView):
+class TaskDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'task_delete.html'
     model = Task
     success_url = reverse_lazy('task_list')
@@ -95,7 +102,7 @@ class ProjectDetailView(DetailView):
     context_object_name = 'project'
 
 
-class ProjectCreateView(CreateView):
+class ProjectCreateView(LoginRequiredMixin, CreateView):
     template_name: str = 'task_create.html'
     form_class = ProjectForm
     model = Project

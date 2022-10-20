@@ -8,10 +8,10 @@
 
 
 <h1>Список проектов</h1>
-<div class="shadow-lg p-3 mb-5 bg-body rounded-3">
+<div class="d-flex shadow-lg p-3 mb-5 bg-body rounded-3 btn-group-vertical">
 
     {% for project in projects %}
-        <a href="{% url 'project_detail' project.pk %}"><p>{{ project.name}}</p></a>
+        <a class=" btn-group-vertical btn btn-secondary btn-sm" href="{% url 'project_detail' project.pk %}"><p>{{ project.name}}</p></a>
     {% endfor %}
 
 </div>
