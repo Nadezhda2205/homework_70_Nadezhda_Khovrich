@@ -34,14 +34,15 @@
             <a class="nav-link active" aria-current="page" href="{% url 'project_create' %}">Новый проект</a>
           </li>
           <div class="ms-5">
-            <form action="" method="GET">
-              {% csrf_token %}
+          <form action="{% url 'task_list' %}" method="GET">
+            {% csrf_token %}
 
-              {{ form}}
+            {{ searchtaskform }}
 
-              <input type="submit" value="Поиск">
+            <input type="submit" value="Поиск">
 
-            </form>
+          </form>
+          
           </div>    
         </ul>
       </div>

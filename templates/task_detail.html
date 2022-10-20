@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<h4>Детальный просмотр задачи<h4>
+    <h4>Детальный просмотр задачи</h4>
     <h5>Задача:</h5>
     {{ task.summary }}
     <h5>Подробное описание:</h5>
@@ -15,6 +15,11 @@
 
     <a class="btn btn-secondary btn-lg" href="{% url 'task_update' task.pk  %}">Редактировать</a>
     <a class="btn btn-secondary btn-lg" href="{% url 'task_delete' task.pk  %}">Удалить</a>
+ 
 
-    {% endblock %}
+
+
+
+
+{% endblock %}
     
